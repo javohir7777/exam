@@ -81,7 +81,9 @@ const CRUDPage = () => {
     <div className="container my-3 skills">
       <div className="d-flex align-items-center justify-content-between text-h1">
         <h1>Skills CRUD Page: {user?._id}</h1>
-        <Button variant="primary" onClick={showModal}>
+        <Button variant="primary" 
+        // onHide={showModal}
+        >
           Add skill
         </Button>
         <Modal show={isModalOpen}>
