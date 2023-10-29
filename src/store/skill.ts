@@ -17,6 +17,10 @@ interface SkillState {
   selected: null | string;
 }
 
+const userId = localStorage.getItem("PORTFOLIO_USER")
+  ? JSON.parse(localStorage.getItem("PORTFOLIO_USER") || "")
+  : null;
+
 const useSkill = create<SkillState>()(
   devtools((set, get) => ({
     skills: [],
@@ -31,8 +35,8 @@ const useSkill = create<SkillState>()(
 
         const {
           data: { pagination, data },
-        } = await request.get(`/skills?user=6537b00efd51940018b21314`, {
-          params: { page: get().page },
+        } = await request.get(`/skills`, {
+          params: { page: get().page, user: userId?._id },
         });
         set((state) => ({
           ...state,
@@ -56,8 +60,8 @@ const useSkill = create<SkillState>()(
       get().setSelected(null);
     },
     setSelected: (selected) => {
-        set((state) => ({ ...state, selected }));
-      },
+      set((state) => ({ ...state, selected }));
+    },
   }))
 );
 export default useSkill;

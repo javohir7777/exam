@@ -156,7 +156,9 @@ const Portfolio = () => {
             >
               <div className="card container">
                 <img
-                  src={`https://ap-portfolio-backend.up.railway.app/upload/${experience?.photo?._id}.jpg`}
+                  src={`https://ap-portfolio-backend.up.railway.app/upload/${
+                    experience?.photo?._id
+                  }.${experience?.photo?.name.split(".")[1]}`}
                   className="card-img-top mt-2"
                   alt="..."
                 />

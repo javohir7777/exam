@@ -1,0 +1,111 @@
+.home1 {
+  width: 100%;
+  align-items: center;
+  font-family: "Arial", sans-serif;
+  color: #3e497a;
+}
+
+.about1 {
+  width: 100%;
+  height: calc(90vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #1d2b52;
+  color: #f0f0f0;
+}
+
+.about1 h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 80px;
+  color: #e9d35b;
+  height: 50px;
+  margin-bottom: 60px;
+}
+
+.about1 .prompt1 {
+  margin-top: 6%;
+  width: 40%;
+  font-size: 30px;
+}
+.prompt1 svg {
+  font-size: 60px;
+  margin: 5px;
+  color: white;
+}
+
+.skills1 {
+  margin-top: 20px;
+  margin-bottom: 3%;
+  font-size: 35px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills1 h1 {
+  color: #3e497a;
+  font-weight: bold;
+  margin-bottom: 5%;
+  font-size: 50px;
+}
+.skills1 h2 {
+  color: #3e497a;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.skills1 .list1 {
+  list-style: none;
+  width: 60%;
+}
+
+.list1 span {
+  font-size: 20px;
+}
+@media only screen and (max-width: 912px) {
+  .about1 h2 {
+    font-size: 60px;
+  }
+
+  .about1 .prompt1 {
+    font-size: 25px;
+    width: 80%;
+  }
+
+  .skills1 {
+    text-align: center;
+  }
+  .list1 {
+    padding: 0;
+  }
+
+  .skills1 h2 {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .about1 h2 {
+    font-size: 40px;
+  }
+
+  .about1 .prompt1 {
+    margin-top: 10%;
+    font-size: 20px;
+    width: 80%;
+  }
+
+  .skills1 {
+    text-align: center;
+  }
+  .list1 {
+    padding: 0;
+  }
+
+  .skills1 h2 {
+    font-size: 30px;
+  }
+}
