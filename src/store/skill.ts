@@ -12,6 +12,7 @@ interface SkillState {
   getSkills: () => void;
   setPage: (page: number) => void;
   controlModal: (data: boolean) => void;
+  // children: string; variant: string; onHide: () => void;
   showModal: () => void;
   setSelected: (selected: null | string) => void;
   selected: null | string;

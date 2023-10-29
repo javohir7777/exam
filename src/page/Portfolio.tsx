@@ -103,7 +103,7 @@ const Portfolio = () => {
                 type="text"
                 className="form-control"
                 name="workName"
-                value={values.workName}
+                value={values.name}
                 onChange={handleChange}
               />
             </div>
@@ -112,7 +112,7 @@ const Portfolio = () => {
               <textarea
                 className="form-control"
                 name="description"
-                value={values.description}
+                value={values.url}
                 onChange={handleChange}
               ></textarea>
             </div>
@@ -122,7 +122,7 @@ const Portfolio = () => {
                 type="text"
                 className="form-control"
                 name="startDate"
-                value={values.startDate}
+                value={values.description}
                 onChange={handleChange}
               />
             </div>

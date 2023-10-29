@@ -81,12 +81,10 @@ const CRUDPage = () => {
     <div className="container my-3 skills">
       <div className="d-flex align-items-center justify-content-between text-h1">
         <h1>Skills CRUD Page: {user?._id}</h1>
-        <Button variant="primary" 
-        // onHide={showModal}
-        >
+        <Button variant="primary" onClick={showModal}>
           Add skill
         </Button>
-        <Modal show={isModalOpen}>
+        <Modal show={isModalOpen} onHide={() => controlModal(false)}>
           <Modal.Header closeButton></Modal.Header>
           <form className="container">
             <div className="mb-3 my-3">
@@ -111,9 +109,9 @@ const CRUDPage = () => {
             </div>
           </form>
           <Modal.Footer>
-            {/* <Button variant="secondary" onClick={controlModal}>
+            <Button variant="secondary" onClick={() => controlModal(false)}>
               Close
-            </Button> */}
+            </Button>
             <Button variant="primary" onClick={SaveSkill}>
               Save skill
             </Button>
