@@ -84,7 +84,7 @@ const CRUDPage = () => {
         <Button variant="primary" onClick={showModal}>
           Add skill
         </Button>
-        <Modal show={isModalOpen} onHide={controlModal}>
+        <Modal show={isModalOpen}>
           <Modal.Header closeButton></Modal.Header>
           <form className="container">
             <div className="mb-3 my-3">
