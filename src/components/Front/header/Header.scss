@@ -1,0 +1,101 @@
+header {
+  background: var(--Black, #232536);
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 0;
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      .portfolios__logo {
+        text-decoration: none;
+        text-decoration: none;
+        color: var(--Light, #fff);
+
+        /* Body 1 */
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+      }
+      i {
+        display: none;
+        font-size: 25px;
+      }
+    }
+    .nav-menus {
+      display: flex;
+      align-items: center;
+      gap: 83px;
+      .nav-menu {
+        padding: 16px 0 0 0;
+        display: flex;
+        gap: 24px;
+        .nav-menu__link {
+          text-decoration: none;
+          color: var(--Light, #fff);
+
+          /* Body 1 */
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 28px; /* 175% */
+        }
+        .active {
+          color: #247774;
+        }
+      }
+      .nav-menu__btn {
+        padding: 16px 48px;
+        text-decoration: none;
+        background: var(--Light, #fff);
+        color: var(--Black, #232536);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; /* 133.333% */
+      }
+      .active {
+        color: #247774;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  header {
+    padding: 10px 0 20px 0;
+    .nav {
+      display: block;
+      .nav-brand {
+        justify-content: space-between;
+        i {
+          display: block;
+        }
+      }
+      .nav-menus {
+        display: block;
+        .nav-menu {
+          padding: 16px 0 20px 0;
+        }
+      }
+      .nav-menus__none {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  header {
+    .nav {
+      .nav-menus {
+        .nav-menu {
+          display: grid;
+        }
+      }
+    }
+  }
+}
