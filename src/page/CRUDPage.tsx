@@ -1,5 +1,5 @@
 import { Button, Modal, Pagination } from "react-bootstrap";
-import useAuth from "../store/auth";
+// import useAuth from "../store/auth";
 import useSkill from "../store/skill";
 import { useEffect, useState } from "react";
 import request from "../server";
@@ -8,7 +8,7 @@ import Loading from "./Loading";
 import "./Skills.scss";
 
 const CRUDPage = () => {
-  const user = useAuth((state) => state.user);
+  // const user = useAuth((state) => state.user);
   const skills = useSkill((state) => state.skills);
   const loading = useSkill((state) => state.loading);
   const total = useSkill((state) => state.total);
