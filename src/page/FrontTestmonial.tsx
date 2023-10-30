@@ -17,7 +17,7 @@ const FrontTestmonial = () => {
       setLoading(true);
       const {
         data: { data },
-      } = await request.get(`/messages?whom=653ec7a5431aba00182b8ee2`);
+      } = await request.get(`/messages`);
       setMessages(data);
     } finally {
       setLoading(false);
@@ -33,7 +33,7 @@ const FrontTestmonial = () => {
           <div className="d-flex align-items-center justify-content-center">
             <Carousel className="w-50" data-bs-theme="white">
               {messages.map((message) => (
-                <Carousel.Item style={{ height: "500px" }} key={message._id}>
+                <Carousel.Item key={message._id}>
                   <img className="d-block w-100" src={img} alt="First slide" />
                   <Carousel.Caption>
                     <h4 className="card-title">{message.title}</h4>

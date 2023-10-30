@@ -1,5 +1,4 @@
 import { Button, Modal, Pagination } from "react-bootstrap";
-// import useAuth from "../store/auth";
 import useSkill from "../store/skill";
 import { useEffect, useState } from "react";
 import request from "../server";
@@ -8,7 +7,6 @@ import Loading from "./Loading";
 import "./Skills.scss";
 
 const CRUDPage = () => {
-  // const user = useAuth((state) => state.user);
   const skills = useSkill((state) => state.skills);
   const loading = useSkill((state) => state.loading);
   const total = useSkill((state) => state.total);
@@ -28,13 +26,6 @@ const CRUDPage = () => {
   useEffect(() => {
     getSkills();
   }, [getSkills]);
-  // const [show, setShow] = useState(false);
-  // const [skills, setSkills] = useState([] as Skill[]);
-  // const [selected, setSelected] = useState(null);
-
-  // useEffect(() => {
-  //   getSkills();
-  // }, []);
 
   const handleChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -56,7 +47,6 @@ const CRUDPage = () => {
       getSkills();
     } finally {
       controlModal(false);
-      // setValues(values);
     }
   };
 
