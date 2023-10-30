@@ -1,26 +1,20 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
-// import Cookies from "js-cookie";
+import { NavLink, useNavigate } from "react-router-dom";
 
-// import LogoutIcon from "@mui/icons-material/Logout";
+import LogoutIcon from "@mui/icons-material/Logout";
 import "./Header.scss";
-// import useAuth from "../../../store/auth";
-// import { TOKEN } from "../../../constants";
 
 const Header = () => {
   const [hamburger, setHamburger] = useState(false);
-  // const navigate = useNavigate();
-  // const isAuthenticated = useAuth((state) => state.isAuthenticated);
+  const navigate = useNavigate();
 
   const openHamburger = () => {
     setHamburger(!hamburger);
   };
 
-  // const logout = () => {
-  //   Cookies.remove(TOKEN);
-  //   isAuthenticated(false);
-  //   navigate("/");
-  // };
+  const logout = () => {
+    navigate("/");
+  };
 
   return (
     <header className="sticky-top">
@@ -56,12 +50,12 @@ const Header = () => {
               <NavLink className="nav-menu__link" to="/home">
                 View portfolio
               </NavLink>
-              {/* <NavLink
+              <a
                 className="text-decoration-none text-white"
-                onClick={logout}
+                onClick={() => logout()}
               >
                 <LogoutIcon />
-              </NavLink> */}
+              </a>
             </ul>
           </div>
         </div>

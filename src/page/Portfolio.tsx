@@ -5,7 +5,6 @@ import { Button, Modal } from "react-bootstrap";
 import Loading from "./Loading";
 import Portfolios from "../types/portfolio";
 
-import "./portfolio.scss";
 const Portfolio = () => {
   const user = useAuth((state) => state.user);
   const [show, setShow] = useState(false);
@@ -172,11 +171,12 @@ const Portfolio = () => {
             >
               <div className="card container">
                 <img
+                  className="card-img-top object-fit-cover my-2"
                   src={`https://ap-portfolio-backend.up.railway.app/upload/${
                     experience?.photo?._id
                   }.${experience?.photo?.name.split(".")[1]}`}
-                  className="card-img-top mt-2"
                   alt="..."
+                  style={{ height: "200px" }}
                 />
                 <div className="card-body"></div>
                 <div className="d-flex align-items-center gap-2">
@@ -224,6 +224,7 @@ const Portfolio = () => {
           ))}
         </div>
       )}
+      {/* <Not /> */}
     </div>
   );
 };
