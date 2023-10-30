@@ -7,6 +7,7 @@ import Loading from "./Loading";
 
 const Experiences = () => {
   const user = useAuth((state) => state.user);
+
   const [show, setShow] = useState(false);
   const [experiences, setExperiences] = useState([] as Experienc[]);
   const [values, setValues] = useState({

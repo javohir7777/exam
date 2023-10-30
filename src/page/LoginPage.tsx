@@ -17,10 +17,13 @@ const LoginPage = () => {
     login(value, navigate);
   };
   return (
-    <div className="vh-100 d-flex justify-content-center align-items-center">
+    <div
+      className="vh-100 d-flex justify-content-center align-items-center"
+      style={{ background: "#23242a" }}
+    >
       <Form onSubmit={submit}>
         <Form.Group controlId="username">
-          <Form.Label>Username</Form.Label>
+          <Form.Label className="text-light">Username</Form.Label>
           <Form.Control
             //   onChange={handleUser}
             required
@@ -30,7 +33,7 @@ const LoginPage = () => {
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         </Form.Group>
         <Form.Group controlId="password">
-          <Form.Label>Password</Form.Label>
+          <Form.Label className="text-light">Password</Form.Label>
           <Form.Control
             //   onChange={handleUser}
             required

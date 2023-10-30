@@ -27,8 +27,8 @@ const HomePage = () => {
       <div className="about1">
         <h2>
           {" "}
-          Hi, My name is Javohir <br />
-          <span style={{ color: "red" }}>{user?.firstName}</span>
+          Hi, My name is <br />
+          <span style={{ color: "#aea46a" }}>{user?.firstName}</span>
         </h2>
         <div className="prompt1">
           <p>
@@ -56,7 +56,7 @@ const HomePage = () => {
         <h1> Skills</h1>
         <ol className="list1">
           <li className="item1">
-            <h2> Front-End</h2>
+            {/* <h2> Front-End</h2> */}
             {skill.map((skill) => (
               <span className="mx-2" key={skill._id}>
                 {skill.name}-{skill.percent}%

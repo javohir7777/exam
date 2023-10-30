@@ -8,6 +8,7 @@ import Educationes from "../types/eduction";
 import "./Education.scss";
 const Education = () => {
   const user = useAuth((state) => state.user);
+
   const [show, setShow] = useState(false);
   const [educationes, setEducationes] = useState([] as Educationes[]);
   const [values, setValues] = useState({
