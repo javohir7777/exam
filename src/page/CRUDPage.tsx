@@ -80,7 +80,7 @@ const CRUDPage = () => {
   return (
     <div className="container my-3 skills">
       <div className="d-flex align-items-center justify-content-between text-h1">
-        <h1>Skills CRUD Page: {user?._id}</h1>
+        <h1>Skills:</h1>
         <Button variant="primary" onClick={showModal}>
           Add skill
         </Button>

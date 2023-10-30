@@ -14,6 +14,8 @@ import FrontEducation from "./page/FrontEducation";
 import FrontPortfolio from "./page/FrontPortfolio";
 import FrontTestmonial from "./page/FrontTestmonial";
 import FrontContact from "./page/FrontContact";
+import Account from "./page/Account";
+import Messages from "./page/Messages";
 
 function App() {
   // const { isAuthenticated, user } = useAuth();
@@ -36,9 +38,11 @@ function App() {
             )
           }
         >
+          <Route path="account" element={<Account />} />
           <Route path="crud" element={<CRUDPage />} />
           <Route path="experiences" element={<Experiences />} />
           <Route path="education" element={<Education />} />
+          <Route path="messages" element={<Messages />} />
           <Route path="portfolio" element={<Portfolio />} />
         </Route>
         <Route path="home/" element={<FrontLayout />}>

@@ -90,7 +90,7 @@ const Education = () => {
   return (
     <div className="container my-3 education">
       <div className="d-flex align-items-center justify-content-between education-h1">
-        <h1>CRUDPage: {user?._id}</h1>
+        <h1>Education:</h1>
         <Button variant="btn btn-outline-primary" onClick={openModal}>
           Add education
         </Button>

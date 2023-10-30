@@ -90,7 +90,7 @@ const Experiences = () => {
   return (
     <div className="container my-3">
       <div className="d-flex align-items-center justify-content-between">
-        <h1>CRUDPage: {user?._id}</h1>
+        <h1>Experiences:</h1>
         <Button variant="primary" onClick={openModal}>
           Add skill
         </Button>

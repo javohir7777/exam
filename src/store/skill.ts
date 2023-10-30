@@ -59,6 +59,7 @@ const useSkill = create<SkillState>()(
     showModal: () => {
       get().controlModal(true);
       get().setSelected(null);
+      
     },
     setSelected: (selected) => {
       set((state) => ({ ...state, selected }));

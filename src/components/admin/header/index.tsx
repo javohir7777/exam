@@ -2,9 +2,12 @@ import { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
 import LogoutIcon from "@mui/icons-material/Logout";
+import useAuth from "../../../store/auth";
+
 import "./Header.scss";
 
 const Header = () => {
+  const user = useAuth((state) => state.user);
   const [hamburger, setHamburger] = useState(false);
   const navigate = useNavigate();
 
@@ -21,8 +24,8 @@ const Header = () => {
       <div className="container">
         <div className="nav">
           <div className="nav-brand">
-            <NavLink to="/crud" className="portfolios__logo">
-              Joxa_Portfolios
+            <NavLink to="/account" className="portfolios__logo">
+              {user?.firstName} account
             </NavLink>
 
             <i
@@ -46,6 +49,9 @@ const Header = () => {
               </NavLink>
               <NavLink className="nav-menu__link" to="/portfolio">
                 Portfolio
+              </NavLink>
+              <NavLink className="nav-menu__link" to="/messages">
+                Messages
               </NavLink>
               <NavLink className="nav-menu__link" to="/home">
                 View portfolio
