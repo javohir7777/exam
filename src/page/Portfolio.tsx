@@ -146,7 +146,7 @@ const Portfolio = () => {
                 onChange={uploadPhoto}
                 type="file"
                 className="form-control"
-                value={values.photo}
+                // value={values.photo}
               />
             </div>
           </form>

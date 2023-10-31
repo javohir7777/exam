@@ -18,7 +18,6 @@ const CRUDPage = () => {
   const controlModal = useSkill((state) => state.controlModal);
   const setSelected = useSkill((state) => state.setSelected);
   const selected = useSkill((state) => state.selected);
-
   const [values, setValues] = useState({
     name: "",
     percent: "",
@@ -26,7 +25,7 @@ const CRUDPage = () => {
   useEffect(() => {
     getSkills();
   }, [getSkills]);
-
+  
   const handleChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setValues({
@@ -49,6 +48,10 @@ const CRUDPage = () => {
       controlModal(false);
     }
   };
+
+  // const showModal = () => {
+  //   setValues({ name: "", percent: "" });
+  // };
 
   const editData = async (id: string) => {
     controlModal(true);
