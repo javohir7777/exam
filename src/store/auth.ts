@@ -24,7 +24,7 @@ const useAuth = create<AuthState>()(
     login: async (values, navigate) => {
       const {
         data: { token, user },
-      } = await request.post("auth/login", values);
+      } = await request.post("/auth/login", values);
       Cookies.set(TOKEN, token);
       localStorage.setItem(USER, JSON.stringify(user));
       set((state) => ({ ...state, isAxiosError: true, user }));

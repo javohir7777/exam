@@ -13,7 +13,9 @@ interface SkillState {
   setPage: (page: number) => void;
   controlModal: (data: boolean) => void;
   // children: string; variant: string; onHide: () => void;
+
   showModal: () => void;
+
   setSelected: (selected: null | string) => void;
   selected: null | string;
 }
@@ -59,7 +61,6 @@ const useSkill = create<SkillState>()(
     showModal: () => {
       get().controlModal(true);
       get().setSelected(null);
-      
     },
     setSelected: (selected) => {
       set((state) => ({ ...state, selected }));
